@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <xsd:element name="TravelerinformationResponse">
+        <xsd:complexType mixed="true">
+            <xsd:sequence>
+                <xsd:element name="page" minOccurs="0" type="xsd:int"/>
+                <xsd:element name="per_page" minOccurs="0" type="xsd:int"/>
+                <xsd:element name="totalrecord" minOccurs="0" type="xsd:int"/>
+                <xsd:element name="total_pages" minOccurs="0" type="xsd:int"/>
+                <xsd:element name="travelers" minOccurs="0">
+                    <xsd:complexType mixed="true">
+                        <xsd:sequence>
+                            <xsd:element name="Travelerinformation" maxOccurs="unbounded">
+                                <xsd:complexType mixed="true">
+                                    <xsd:sequence>
+                                        <xsd:element name="id" minOccurs="0" type="xsd:int"/>
+                                        <xsd:element name="name" minOccurs="0" type="xsd:normalizedString"/>
+                                        <xsd:element name="email" minOccurs="0" type="xsd:normalizedString"/>
+                                        <xsd:element name="adderes" minOccurs="0" type="xsd:normalizedString"/>
+                                        <xsd:element name="createdat" minOccurs="0" type="xsd:dateTime"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
