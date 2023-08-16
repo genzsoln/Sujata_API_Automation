@@ -33,6 +33,6 @@ public class GetAllHeadersInfo
 
 
 //when we simple write log().all all header info will be displayed no need to write big code
-// most of the time this is not used
+//most of the time this is not used
 //also we can write log().headers() it will return only headers
 

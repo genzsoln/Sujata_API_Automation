@@ -9,10 +9,10 @@ import org.json.JSONObject;
 
 public class Cookies 
 {
-	// suppose you want to capture data from header and cookies
-	// cookies are dynamically changes, we can't expect exact value of the cookies everytime it's keep changing
-	// whenever value keep changing means our functionality working fine
-	// whenever u get data from server then new cookies will be generated
+//	 suppose you want to capture data from header and cookies
+//	 cookies are dynamically changes, we can't expect exact value of the cookies everytime it's keep changing
+//	 whenever value keep changing means our functionality working fine
+//	 whenever u get data from server then new cookies will be generated
 	
 	//@Test(priority=1)
 	void testCookies()

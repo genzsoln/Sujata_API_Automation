@@ -358,7 +358,7 @@ Restassured supported different authentication
 
 -- Basic Authentication in APIs requires sending a username and password
 -- postman goes this url to support basic ,digest & preemptive auth
--- depends of which auth we choosen according to that alorithm for that auth will be triggered
+-- depends of which auth we choosen according to that algorithm for that auth will be triggered
 Example
 	.auth().basic("postman", "password")
 	
@@ -366,7 +366,7 @@ Example
 
 -- digest Authentication in APIs requires sending a username and password
 -- postman goes this url to support basic ,digest & preemptive auth
--- depends of which auth we choosen according to that alorithm for that auth will be triggered
+-- depends of which auth we choosen according to that algorithm for that auth will be triggered
 Example
 	.auth().digest("postman", "password")
 
@@ -374,11 +374,11 @@ Example
 
 -- preempive Authentication in APIs requires sending a username and password
 -- postman goes this url to support basic ,digest & preemptive auth
--- depends of which auth we choosen according to that alorithm for that auth will be triggered
+-- depends of which auth we choosen according to that algorithm for that auth will be triggered
 Example
 	.auth().preemptive().basic("postman", "password") //combination of 2 type of authentication
 	
-1 above all 3 requires username & password but algoriths are different
+1 above all 3 requires username & password but algorithms are different
 2 depends on customer reqirement developer have do some kind of api they will implement what kind of 
 	authentication is required for that api its depends on complexity of app
 3 suppose u r app is more sensitive and lots of security is required that time devloper go with auth 2 
@@ -409,9 +409,87 @@ How to create bearer token
 
 5 auth 1.0, 2.0
 
+-- for auth1 authentication we have to pass multiple parameter
+-- developer will give us information how to generate Auth1 authentication
+-- for auth one four parameters are required 
+	1 consumerKey
+	2 consumerSecrat
+	3 accestoken
+	4 tokenSecrate
+-- all these details required to generate auth1 authentication
+Example :
+	.auth().oauth("consumerKey", "consumerSecrat", "accestoken", "tokenSecrate")
+	
+-- for auth2 neeed to pass access token
+-- auth 2.0 authentication we have only one paramenter i.e token
+-- auth 2.0 will reduce no of parameters
+Example :
+	.auth().oauth2("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") 
+-- Above details required to generate auth2 authentication
+	
 
 6 API Key
 
+-- developer know about how to generate qpi key and authentication
+-- developer will guid us accordingly
+-- API Key Authentication is like a password that clients use when talking to a website or application's 
+	behind-the-scenes code.
+Example :
+	.queryParam("appid", "")
+		appid is api key
+		api key is pass as part of query parameter
+		
 
+------------------------------------------ Chaining ----------------------------------------------------
+
+-- API chaining is using the results of one API as the input for another API to perform complex tasks.
+
+-- API chaining is when you use multiple APIs one after another to get a specific job done, like getting 
+	data from one API and using it as input for another API to achieve a more complex task.
+
+follow the below steps :
+
+1 First we have to create four different class
+2 for update ,get, delete, create user
+3 After that right click on the package
+4 Select TestNg
+5 Then select Convert to TestNg & provide the name with .xml & click on finish
+6 One xml file will be generated with our all classes
+7 Here we can do parallerl testing
+8 If we want to or run multiple classes to gether the we have to use Chaining
+9 Click on run then select TestNG Suite
+
+Example :
+	<classes>
+      <class name="Chaining.CreateUser"/>
+      <class name="Chaining.GetUser"/>
+      <class name="Chaining.UpdateUSer"/>
+      <class name="Chaining.DeleteUser"/>
+    </classes>
+
+Supoose we want to run all the classes seperately then follow below process
+
+1 First we have to create four different class
+2 After that right click on the package
+3 Select TestNg
+4 Then select Convert to TestNg & provide the name with .xml & click on finish
+5 One xml file will be generated 
+6 We have to provide name for each test i.e <test  name="Test3">
+
+Example :
+  <test  name="Test1">
+    <classes>
+      <class name="Chaining.CreateUser"/>
+    </classes>
+  </test> 
+  
+    <test  name="Test2">
+    <classes>
+      <class name="Chaining.GetUser"/>
+    </classes>
+  </test>
+  
+7 Click on run then select TestNG Suite 
+8 All the classes runs seperately
 
 */

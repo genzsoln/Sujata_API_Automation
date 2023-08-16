@@ -2,9 +2,9 @@ package SerializationAndDeserialization;
 
 public class Student 
 {
-	//this class contains variable getter and setter methods
-	// here we require 4 variable name, location, phone ( this 3 are primitive variable ) & cources (array variable)
-	//click on all variables & then click on Generate
+//	this class contains variable getter and setter methods
+//	 here we require 4 variable name, location, phone ( this 3 are primitive variable ) & cources (array variable)
+//	click on all variables & then click on Generate
 	
 	String name;
 	String location;

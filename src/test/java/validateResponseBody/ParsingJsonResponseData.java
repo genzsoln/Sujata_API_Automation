@@ -62,24 +62,45 @@ public class ParsingJsonResponseData
 	void testJsonResponseBodyData()
 	{
 	
-	Response res = given()
-			.contentType(ContentType.JSON)
-			
-			.when()
-				.get("http://localhost:3000/book");
-	
-	//using json object class
-	JSONObject jo =new JSONObject(res.asString());                 // converting response to json object type
-	
-	
-	//print all title of books
-	for(int i=0; i<jo.getJSONArray("book").length(); i++)        // find all json length()
-	{
+//	Response res = given()
+//			.contentType(ContentType.JSON)
+//			
+//			.when()
+//				.get("http://localhost:3000/book");
+//	
+//	//using json object class
+//	JSONObject jo =new JSONObject(res.asString());                 // converting response to json object type
+//	
+//	
+//	//print all title of books
+//	for(int i=0; i<jo.getJSONArray("book").length(); i++)        // find all json length()
+//	{
+//		
+//		//capture title from every object by using index
+//		
+//		String bookTitle=jo.getJSONArray("book").getJSONObject(i).get("title").toString(); 
+//		System.out.println(bookTitle);
+//	}
 		
-		//capture title from every object by using index
+		//PRINT ALL THE BOOK TITLE
+
+		//Response res; //we can do more no of validation using variable
 		
-		String bookTitle=jo.getJSONArray("book").getJSONObject(i).get("title").toString(); 
-		System.out.println(bookTitle);
+		Response res = 
+	            given()
+	                .contentType(ContentType.JSON)
+	            .when()
+	                .get("http://localhost:3000/book");
+
+	        JSONArray jsonArray = new JSONArray(res.asString());
+
+	        for (int i = 0; i < jsonArray.length(); i++) 
+	        {
+	            JSONObject bookObject = jsonArray.getJSONObject(i);
+	            String bookTitle = bookObject.optString("title", "");
+	            System.out.println("Book Title: " + bookTitle);
+	        }
+	}
 	}
 //	
 //	
@@ -121,8 +142,6 @@ public class ParsingJsonResponseData
 //	}
 //	System.out.println("total price of books is:"+ totalprice);
 //		Assert.assertEquals(totalprice, 526.0);
-	}
-}
-		
+	
 		
 			

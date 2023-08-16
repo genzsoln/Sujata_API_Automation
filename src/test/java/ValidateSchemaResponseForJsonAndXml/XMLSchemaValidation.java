@@ -10,8 +10,8 @@ import static io.restassured.RestAssured.given;
 
 public class XMLSchemaValidation 
 {
-	//https://easycodeforall.com/XMLTOXSDSUBMIT
-    // https://www.convertsimple.com/convert-xml-to-xsd-xml-schema/
+//	https://easycodeforall.com/XMLTOXSDSUBMIT
+//     https://www.convertsimple.com/convert-xml-to-xsd-xml-schema/
     
     @Test
     void xmlschemaValidation()

@@ -8,11 +8,11 @@ import org.json.JSONObject;
 
 public class BasicHeaderValidation 
 {
-	// some info of header keep changing not every field
-	// server info , content encoding, content type, cache control, (info most of the time constant) will not change
-	// date ehen it will expire, P#P info will be change
-	// whatever details are constant we have to validate that "content type & content encoding most of the time we have to validate
-	//& some time server name
+//	 some info of header keep changing not every field
+//	 server info , content encoding, content type, cache control, (info most of the time constant) will not change
+//	 date ehen it will expire, P#P info will be change
+//	 whatever details are constant we have to validate that "content type & content encoding most of the time we have to validate
+//	& some time server name
 		
 	@Test
 		void testHeader()

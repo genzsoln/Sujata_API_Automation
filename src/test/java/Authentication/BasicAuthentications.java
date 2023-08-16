@@ -8,15 +8,15 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 
 public class BasicAuthentications 
 {
-	//	Authentication  - we need to check user is valid or not
-	// Authorization - user is valid but we need to check permission/access for that user  
-	//restassured diff authentication supported
-	//basic
-	//digest
-	//preempive
-	//bearer token
-	//auth 1.0, 2.0
-	//API KEy
+//	Authentication  - we need to check user is valid or not
+//	 Authorization - user is valid but we need to check permission/access for that user  
+//	restassured diff authentication supported
+//	basic
+//	digest
+//	preempive
+//	bearer token
+//	auth 1.0, 2.0
+//	API KEy
 	
 	@Test(priority=1)
 	void testBasicAuthentication()
@@ -64,6 +64,7 @@ public class BasicAuthentications
 			.log().all();
 	}
 }
+
 //above all 3 requires username & password but algoriths are different
 
 //depends on customer reqirement developer have do some kind of api they will implement what kind of authentication is required for that api
