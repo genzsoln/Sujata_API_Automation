@@ -13,13 +13,13 @@ import static io.restassured.RestAssured.given;
 
 public class Deserialization 
 {
-	// Deserialization means json to POJO
-	// json data should be in string format
-	//here we used jackson package along with obj mapper class
-	// why this process implementes json is light weight format And that more secure
-	//we cant send diff java obj through n/w thats not safe
-	// so we always transfer the data in json format
-	// in restassured by default serialization and deserialization process is there
+//	 Deserialization means json to POJO
+//	 json data should be in string format
+//	here we used jackson package along with obj mapper class
+//	 why this process implementes json is light weight format And that more secure
+//	we cant send diff java obj through n/w thats not safe
+//	 so we always transfer the data in json format
+//	 in restassured by default serialization and deserialization process is there
 	
 	@Test
 	void convertJson2Pojon() throws JsonProcessingException

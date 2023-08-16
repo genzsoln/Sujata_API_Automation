@@ -17,6 +17,30 @@ public class JSONSchemaValidation {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //response validation - we validate data in response 
 //schema validataion - we will focuse on the type of data
 //once we get the response from that response  we have to create

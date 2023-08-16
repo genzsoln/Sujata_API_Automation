@@ -6,12 +6,12 @@ import static org.hamcrest.Matchers.*;
 
 public class PathAndQueryParameter 
 {
-	// https://reqres.in/api/users?page=2&id=5
-	// https://reqres.in called domain it will 1st reach to the server
-	// wherever there is / or .in/.com/.org this is called domain
-	// api is a path 
-	// users is also path
-	// page=2  after ? what ever is there called query parameter
+//	 https://reqres.in/api/users?page=2&id=5
+//	 https://reqres.in called domain it will 1st reach to the server
+//	 wherever there is / or .in/.com/.org this is called domain
+//	 api is a path 
+//	 users is also path
+//	 page=2  after ? what ever is there called query parameter
 	
 	@Test
 	void testQueryAndPathParameters()

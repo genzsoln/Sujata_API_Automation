@@ -10,9 +10,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 ;public class Serialization 
 {
-	//when we send request it will go along with body in json format, response also e get in json format
-	//serialization means POJO to JSON
-	// pojo is converting into json and json gothrought our request along with the 
+//	when we send request it will go along with body in json format, response also e get in json format
+//	serialization means POJO to JSON
+//	 pojo is converting into json and json gothrought our request along with the 
 
 	@Test
 	void convertPojo2Json() throws JsonProcessingException

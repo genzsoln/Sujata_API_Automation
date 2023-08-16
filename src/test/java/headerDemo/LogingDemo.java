@@ -7,7 +7,7 @@ import org.json.JSONObject;
 
 public class LogingDemo 
 {
-	// we can use this log method along with then methos there are many sub methods inside the log
+	// we can use this log method along with then methods there are many sub methods inside the log
 	
 	@Test
 	void testLogs()
@@ -18,9 +18,9 @@ public class LogingDemo
 			.get("https://reqres.in/api/userd?page=2")
 			
 		.then()
-			//.log().all(); //if you want all response /info	
-			//.log().body(); //if you want specific body info
-			//.log().cookies(); //if you want to print only cookies
+//			.log().all(); //if you want all response /info	
+//			.log().body(); //if you want specific body info
+//			.log().cookies(); //if you want to print only cookies
 			.log().headers(); //print only headers
 	}
 }
